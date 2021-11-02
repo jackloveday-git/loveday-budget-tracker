@@ -11,7 +11,7 @@ request.onupgradeneeded = (event) => {
 
     // Create idb obj and set its auto inc
     const idb = event.target.result;
-    idb.createObjectidbStore("pending", {
+    idb.createObjectStore("pending", {
         autoIncrement: true
     });
 };
@@ -42,7 +42,7 @@ function saveRecord(record) {
     ], "readwrite");
 
     // Access for 'pending', then add our new record
-    const idbStore = transaction.objectidbStore("pending");
+    const idbStore = transaction.objectStore("pending");
     idbStore.add(record);
 }
 
@@ -55,7 +55,7 @@ function checkDatabase() {
     ], "readwrite");
 
     // Access for 'pending'
-    const idbStore = transaction.objectidbStore("pending");
+    const idbStore = transaction.objectStore("pending");
 
     // Get all of the records in idb
     const getAll = idbStore.getAll();
@@ -81,12 +81,12 @@ function checkDatabase() {
             .then(() => {
 
                 // Open a new transaction record
-                const transaction = db.transaction([
+                const transaction = idb.transaction([
                     "pending"
                 ], "readwrite");
 
                 // Access for 'pending'
-                const idbStore = transaction.objectidbStore("pending");
+                const idbStore = transaction.objectStore("pending");
 
                 // Empty the idb
                 idbStore.clear();
