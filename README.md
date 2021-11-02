@@ -1,8 +1,8 @@
 
   # Budget Tracker
   [![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
-  ![GitHub language count](https://img.shields.io/github/languages/count/jackloveday-git//loveday-budget-tracker)
-  ![GitHub top language](https://img.shields.io/github/languages/top/jackloveday-git//loveday-budget-tracker)
+  ![GitHub language count](https://img.shields.io/github/languages/count/jackloveday-git/loveday-budget-tracker)
+  ![GitHub top language](https://img.shields.io/github/languages/top/jackloveday-git/loveday-budget-tracker)
   
   ## Description
   Budget tracker application to allow for offline access and functionality  
